@@ -1,0 +1,46 @@
+Question 3) Additional features of YOLO v2 compared to YOLO v1
+Introduction:
+
+The field of object detection in computer vision has witnessed significant advancements in recent years, with algorithms like YOLO (You Only Look Once) playing a pivotal role in pushing the boundaries of real-time object detection. YOLO v2, an improved version of the original YOLO, introduced several innovative features to enhance accuracy, speed, and robustness in object detection tasks. In this report, we delve into five key additional features of YOLO v2,which impact on the performance of the algorithm.
+
+Now, let's explore five additional features of YOLO v2 and their contributions:
+          
+1)Batch Normalization:
+YOLO v2 incorporates batch normalization layers into its architecture, which helps in stabilizing and accelerating the training process. By normalizing the activations of each layer, batch normalization reduces internal covariate shift, making the network more robust and less sensitive to initialization. This results in faster convergence during training and improved generalization performance.
+
+
+2)High-Resolution Classifier:
+Unlike its predecessor, YOLO v2 employs a high-resolution classifier during training. By using a classifier with a higher input resolution, YOLO v2 can capture finer details of objects and learn more discriminative features, leading to improved detection accuracy, especially for small objects in the image.
+
+
+3)Anchor Boxes:
+YOLO v2 introduces the concept of anchor boxes to better handle object localization. Instead of predicting bounding boxes directly, the algorithm predicts offsets with respect to predefined anchor boxes of different aspect ratios and scales. This allows YOLO v2 to effectively localize objects of various shapes and sizes, enhancing its versatility and robustness in object detection.
+
+
+4)Dimension Clusters for Anchor Boxes:
+In YOLO v2, anchor boxes are generated using k-means clustering on the training dataset to determine appropriate bounding box priors. By clustering the ground truth bounding box shapes, YOLO v2 adapts its anchor boxes to the specific distribution of object sizes and aspect ratios in the dataset, leading to more accurate localization and improved detection performance.
+
+
+5)Direct Location Prediction:
+YOLO v2 refines the way bounding box coordinates are predicted by directly regressing the coordinates relative to the grid cell locations. This eliminates the need for explicit anchor box adjustments, simplifying the prediction process and improving localization accuracy. Additionally, YOLO v2 predicts object confidence scores based on Intersection over Union (IoU), providing more accurate objectness estimation.
+
+
+6)Fine-Grained Features:
+Incorporating fine-grained features from higher-resolution layers allowed YOLOv2 to detect small objects more effectively, contributing to a 1% increase in mAP. By concatenating these features with the original feature maps, the model gained better object detection capabilities.
+
+
+7)Multi-Scale Training:
+YOLOv2 employed multi-scale training, where image dimensions were randomly varied every 10 batches. This technique improved the model's ability to generalize to objects of different sizes, leading to better performance across various scales.
+
+
+8)Darknet-19 Architecture:
+YOLOv2 utilized the Darknet-19 classification network, known for its efficiency and balance between accuracy and model complexity. By leveraging 1×1 convolutions to reduce parameters, YOLOv2 achieved faster detection speeds while maintaining competitive accuracy.
+
+
+9)YOLO9000 with WordTree:
+YOLO9000 expanded upon YOLOv2 by combining datasets from COCO and ImageNet using a hierarchical tree-based structure called WordTree. This allowed for the integration of diverse classes and improved classification accuracy.
+
+
+These are the enhancements collectively contributed to better accuracy, stability, and efficiency in object detection tasks compared to YOLOv1.
+
+
